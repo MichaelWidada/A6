@@ -8,7 +8,7 @@
 * 
 *  Name: Michael Widada Student ID: 184623239 Date: 12-04-2025
 *
-*  Published URL:  
+*  Published URL:  https://a6-flax-nine.vercel.app/
 *
 ********************************************************************************/
 
