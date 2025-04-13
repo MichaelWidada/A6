@@ -27,6 +27,7 @@ const HTTP_PORT = process.env.PORT || 8080;
 
 // app.use(express.static('public')); // causing tailwindCSS not working on vercel.com
 app.use(express.static(path.join(__dirname, 'public')));
+app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
