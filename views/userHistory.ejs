@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User History</title>
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+
+<body tabindex="-1">
+  <%- include('partials/navbar', {page: '/userHistory'}) %>
+
+  <br />
+
+  <div class="container mx-auto">
+    <div class="hero bg-base-200 rounded-lg p-6 mb-6">
+      <div class="hero-content text-center">
+        <div class="max-w-md w-full">
+          <h1 class="text-4xl font-bold">User Info</h1>
+          <p><strong>User Name:</strong> <%= user.userName %></p>
+          <p><strong>Email:</strong> <%= user.email %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="overflow-x-auto bg-white shadow-lg rounded-lg">
+      <table class="table w-full">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Login Date/Time</th>
+            <th>User Agent</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% user.loginHistory.forEach((entry, index) => { %>
+            <tr>
+              <td><%= index + 1 %></td>
+              <td><%= entry.dateTime %></td>
+              <td><%= entry.userAgent %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
